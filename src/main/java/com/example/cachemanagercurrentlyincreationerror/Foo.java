@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import java.io.Serializable;
+
 @Entity
-public class Foo {
+public class Foo implements Serializable {
 
     @Id
     @GeneratedValue
