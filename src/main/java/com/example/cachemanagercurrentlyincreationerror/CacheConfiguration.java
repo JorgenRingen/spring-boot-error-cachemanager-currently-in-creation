@@ -20,16 +20,8 @@ public class CacheConfiguration {
     }
 
     @Bean
-    public Config config(FooMapStore fooMapStore) {
-        Config config = new Config()
-                .setInstanceName("testing");
-
-        config.addMapConfig(new MapConfig()
-                .setName("testing")
-                .setMapStoreConfig(new MapStoreConfig()
-                        .setImplementation(fooMapStore)));
-
-        return config;
+    public Config config() {
+        return new Config().setInstanceName("testing");
     }
 
     @Bean
